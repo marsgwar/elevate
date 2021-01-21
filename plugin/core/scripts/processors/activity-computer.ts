@@ -1058,6 +1058,7 @@ export class ActivityComputer {
 
 		const cadenceRatioOnMovingTime: number = cadenceOnMoveSampleCount / movingSampleCount;
 		const averageCadenceOnMovingTime: number = cadenceSumOnMoving / cadenceSumDurationOnMoving;
+		const cadenceMedianAbsoluteDeviation: number = Math.Mad(cadencesOnMoving);
 
 		const varianceCadence: number = (cadenceVarianceSumOnMoving / cadenceOnMoveSampleCount) - Math.pow(averageCadenceOnMovingTime, 2);
 		const standardDeviationCadence: number = (varianceCadence > 0) ? Math.sqrt(varianceCadence) : 0;
